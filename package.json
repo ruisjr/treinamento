@@ -6,11 +6,12 @@
     "live-server": "^1.2.1",
     "parcel-bundler": "^1.12.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "dev": "parcel src/index.html", //hot reload. assim que salvar, já exibe no navegador
-    "build": "parcel build src/index.html", // cria os arquivo buildados para ser utilizados em produção
-    "start": "npm run build & live-server dist" // roda o build, cria a dist e roda o live-server apontando para a pasta dist
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "start": "npm run build & live-server dist"
   }
 }

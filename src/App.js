@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles'
+import Title from "./Title";
+import Joke from './Jokes';
+import Header from './Header'
 
 import profile from './assets/profile.png'
 
 class App extends Component {
 
     // constructor() {
-    state = { counter: 0, displayBio: false };
+    state = { displayBio: false };
 
-    // Arrow Functions
-    addCounter = () => {
-        this.setState({ counter: this.state.counter + 1});
-        console.log('this', this);
-    }
-    
     toggleDisplayBio = () => {
         this.setState({ displayBio : !this.state.displayBio})
     }
@@ -22,10 +19,12 @@ class App extends Component {
     render() {
         return (
             <div>
+                <Header />
                 <img src={profile} className='profile'/>
 
                 <h1>Meu Portifolio!!!</h1>
                 <p>Ola, meu nome e Rui Ignacio Jr.</p>
+                <Title />
                 <hr />
                 {
                     this.state.displayBio ? (
@@ -41,11 +40,11 @@ class App extends Component {
                         </div>
                     )
                 }
-                <p>{this.state.counter}</p>
-                <button onClick={this.addCounter}>addCounter</button>
                 <hr></hr>
                 <Projects />
                 <hr></hr>
+                <Joke />
+                <br />
                 <SocialProfiles />
             </div>
         )
